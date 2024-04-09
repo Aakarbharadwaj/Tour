@@ -9,10 +9,19 @@
         border-radius: 10px;
     }
 
+    .card-description {
+        font-size: small;
+    }
+
     span {
         color: rgb(36, 58, 255);
         font-size: small;
+        
     }
+    span:hover{
+        cursor: pointer;
+    }
+    
 
     button {
         background-color: pink;
