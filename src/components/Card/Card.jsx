@@ -1,15 +1,19 @@
 import React from 'react'
 import './Card.css'
-const Card = () => {
+const Card = ({ id, name, info, image, price }) => {
+
+    const description = info.sub
     return (
         <div className='card'>
-            <img src='' />
+            <img className='image' src={image} />
             <div className='card-content '>
-                <h1>Title</h1>
-                <h3>4500/-</h3>
-                <p className='card-description'>hello world <span>Read more...</span></p>
+                <h3>{price}/-</h3>
+                <h1>{name}</h1>
+                <p className='card-description'>{info}... <span>Read more</span></p>
             </div>
-            <button>Not interested</button>
+            <div className='button'>
+                <button>Not interested</button>
+            </div>
         </div>
     )
 }
