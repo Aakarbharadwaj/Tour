@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from '../Card/Card'
 import './Tour.css'
-const Tour = ({ tours }) => {
+const Tour = ({ tours, removeTours }) => {
     return (
         <>
             <div className='head'>
@@ -10,7 +10,7 @@ const Tour = ({ tours }) => {
             <div className='tour-body'>
                 {
                     tours.map(item => {
-                        return <Card {...item} key={item.id} />
+                        return <Card {...item} key={item.id} removeTours={removeTours} />
                     })
                 }
             </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Card.css'
-const Card = ({ id, name, info, image, price }) => {
+const Card = ({ id, name, info, image, price ,removeTours}) => {
     const [readmore, setReadmore] = useState(false);
     
     const description = readmore?info:`${info.substring(0, 100)}...`
@@ -16,7 +16,7 @@ const Card = ({ id, name, info, image, price }) => {
                 <p className='card-description'>{description} <span onClick={readmoreHandler}>{readmore?'Show less':'Read more'}</span></p>
             </div>
             <div className='button'>
-                <button>Not interested</button>
+                <button onClick={()=>removeTours(id)}>Not interested</button>
             </div>
         </div>
     )
