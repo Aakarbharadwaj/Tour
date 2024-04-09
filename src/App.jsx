@@ -8,9 +8,19 @@ function App() {
     const newTour = tours.filter(item => item.id !== id);
     setTour(newTour);
   }
+  const reloadHandler = () => {
+    setTour(data);
+  }
+  if (tours.length === 0) {
+    return (
+      <div className='tour-btn'>
+        <button onClick={reloadHandler}>Refresh</button>
+      </div>
+    )
+  }
   return (
     <div>
-      <Tour tours={tours} removeTours={removeTours} />
+      <Tour tours={tours} removeTours={removeTours} reloadHandler={reloadHandler} />
     </div>
   )
 }

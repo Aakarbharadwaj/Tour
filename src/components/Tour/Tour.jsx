@@ -8,6 +8,7 @@ const Tour = ({ tours, removeTours }) => {
                 <h1>Tour And Explore</h1>
             </div>
             <div className='tour-body'>
+            
                 {
                     tours.map(item => {
                         return <Card {...item} key={item.id} removeTours={removeTours} />
