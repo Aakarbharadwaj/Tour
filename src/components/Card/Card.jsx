@@ -3,7 +3,7 @@ import './Card.css'
 const Card = ({ id, name, info, image, price }) => {
     const [readmore, setReadmore] = useState(false);
     
-    const description = `${info.substring(0, 100)}...`
+    const description = readmore?info:`${info.substring(0, 100)}...`
     const readmoreHandler = ()=>{
         setReadmore(!readmore);
     }
