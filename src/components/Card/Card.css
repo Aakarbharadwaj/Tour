@@ -1,0 +1,9 @@
+.card {
+    border: 1px solid black;
+    width: 250px;
+    border-radius: 10px;
+
+    span {
+        color: rgb(0, 110, 153);
+    }
+}
